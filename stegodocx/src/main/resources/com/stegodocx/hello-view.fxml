@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"  fx:controller="com.stegodocx.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <children>
+
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <GridPane layoutX="7.0" layoutY="6.0" prefHeight="311.0" prefWidth="579.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="181.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="531.0" minWidth="10.0" prefWidth="398.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="90.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="label1" GridPane.rowIndex="1" />
+                        <TextField fx:id="docxTextField" prefHeight="23.0" prefWidth="386.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <HBox prefHeight="166.0" prefWidth="509.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <children>
+                                <Button mnemonicParsing="false"  onMouseClicked="#btnHidden" text="데이타 은닉" />
+                                <Button mnemonicParsing="false" onMouseClicked="#btnFind" text="은닉한 문서 추출" />
+                                <TextField fx:id="docxTextResult" promptText="실행결과" />
+                            </children>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                            <GridPane.margin>
+                                <Insets />
+                            </GridPane.margin>
+                        </HBox>
+                        <TextField fx:id="jpegTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label mnemonicParsing="false" text="JPEG 이미지 선택" GridPane.rowIndex="3" />
+                        <Label mnemonicParsing="false" prefHeight="23.0" prefWidth="122.0" text="은닉할 문서 선택" GridPane.rowIndex="1" />
+                        <Label mnemonicParsing="false" text="은닉/추출 암호 입력" GridPane.rowIndex="2" />
+                        <TextField fx:id="keyTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="436.0" text="Copyright : Young-June Lee(webswing@gmail.com)" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#selOpenDocxFile" text="Select" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#selOpenJpgFile" text="Select" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                        <Label text="은닉되어 있는 JPEG 파일" GridPane.rowIndex="4" />
+                        <TextField fx:id="jpegResultTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Select" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                    </children>
+                </GridPane>
+            </children>
+        </Pane>
+    </children>
+
+</VBox>
